@@ -1,4 +1,4 @@
 geotaxi
 =======
 
-hybrid app using geolocation to locate taxis and passengers
+hybrid app using geolocation to locate taxis and passengers.
