@@ -1,0 +1,16 @@
+{
+  "name": "geotaxi",
+  "subdomain": "geotaxi",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "server.js"
+  },
+  "dependencies": {
+    "express": "3.0.0beta6",
+    "ejs": "*",
+    "stylus": "*"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}
