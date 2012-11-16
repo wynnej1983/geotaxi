@@ -1,0 +1,10 @@
+@import url("common.css");
+@import url("jquery.mobile-1.2.0.min.css");
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}

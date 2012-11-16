@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GeoTaxi</title>
+    <link rel="stylesheet" href="public/stylesheets/style.css" />
+    <script data-main="public/javascripts/main.js" src="public/javascripts/lib/require.js"></script>
+  </head>
+  <body>
+        <!-- Home -->
+        <div data-role="page" id="home">
+            <div id="home-header" data-theme="a" data-role="header">
+                <h3>
+                    Pick Me Up
+                </h3>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li>
+                            <a href="#stats" data-theme="" data-icon="info" data-transition="slide" >
+                                Stats
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#settings" data-theme="" data-icon="gear" data-transition="slide">
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <img src="#" alt="map" width="300" height="300" />
+                <a id="btn-find-nearest-taxi" data-role="button" data-theme="e" href="#" data-icon="search" data-iconpos="right">
+                    Find nearest Taxi
+                </a>
+            </div>
+            <div id="footer" data-theme="a" data-role="footer" data-position="fixed">
+                <h3>
+                    Locating...
+                </h3>
+            </div>
+        </div>
+
+
+        <!-- Settings -->
+        <div data-role="page" id="settings">
+            <div id="settings-header" data-theme="a" data-role="header">
+                <h3>
+                  Settings
+                </h3>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li>
+                            <a href="#home" data-theme="" data-transition="slide" data-direction="reverse">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+              settings here..
+            </div>
+        </div>
+
+
+        <!-- Stats -->
+        <div data-role="page" id="stats">
+            <div id="stats-header" data-theme="a" data-role="header">
+                <h3>
+                  Stats
+                </h3>
+                <div data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li>
+                            <a href="#home" data-theme="" data-transition="slide" data-direction="reverse">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+              stats here..
+            </div>
+        </div>
+  </body>
+</html>

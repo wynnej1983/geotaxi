@@ -2,89 +2,177 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.2.0.min.css" />
-    <script data-main="javascripts/main.js" src="../javascripts/lib/require.js"></script>
+    <link rel="stylesheet" href="/stylesheets/app.css" />
   </head>
   <body>
-        <!-- Home -->
-        <div data-role="page" id="home">
-            <div id="home-header" data-theme="a" data-role="header">
-                <h3>
-                    Pick Me Up
-                </h3>
-                <div data-role="navbar" data-iconpos="left">
-                    <ul>
-                        <li>
-                            <a href="#stats" data-theme="" data-icon="info" data-transition="slide" >
-                                Stats
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#settings" data-theme="" data-icon="gear" data-transition="slide">
-                                Settings
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div data-role="content">
-                <img src="#" alt="map" width="300" height="300" />
-                <a id="btn-find-nearest-taxi" data-role="button" data-theme="e" href="#" data-icon="search" data-iconpos="right">
-                    Find nearest Taxi
-                </a>
-            </div>
-            <div id="footer" data-theme="a" data-role="footer" data-position="fixed">
-                <h3>
-                    Locating...
-                </h3>
-            </div>
+    <div id="app">
+      <!-- Home -->
+      <div data-role="page" data-bind="with: TaxiSearchViewModel" id="home">
+        <div id="home-header" data-theme="a" data-role="header">
+          <h3>
+            Pick Me Up
+          </h3>
+        </div>
+        <div data-role="content">
+          <div id="map" style="width:100%; height:430px"></div>
+          <a id="btn-find-nearest-taxi" data-role="button" data-theme="e" href="#" data-icon="search" data-iconpos="right">
+            Find nearest Taxi
+          </a>
+        </div>
+        <div id="home-footer" data-theme="a" data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-iconpos="left">
+            <ul>
+              <li>
+              <a href="#home" data-theme="" data-icon="home" data-transition="slide" class="ui-btn-active">
+                Home
+              </a>
+              </li>
+              <li>
+              <a href="#account" data-theme="" data-icon="grid" data-transition="slide">
+                Account
+              </a>
+              </li>
+              <li>
+              <a href="#stats" data-theme="" data-icon="info" data-transition="slide" >
+                Stats
+              </a>
+              </li>
+              <li>
+              <a href="#settings" data-theme="" data-icon="gear" data-transition="slide">
+                Settings
+              </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Settings -->
+      <div data-role="page" data-bind="with: SettingsViewModel"  id="settings">
+        <div id="settings-header" data-theme="a" data-role="header">
+          <h3>
+            Settings
+          </h3>
+        </div>
+        <div data-role="content">
+          settings here..
         </div>
 
+        <div id="settings-footer" data-theme="a" data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-iconpos="left">
+            <ul>
+              <li>
+              <a href="#home" data-theme="" data-icon="home" data-transition="slide" >
+                Home
+              </a>
+              </li>
+              <li>
+              <a href="#account" data-theme="" data-icon="grid" data-transition="slide">
+                Account
+              </a>
+              </li>
+              <li>
+              <a href="#stats" data-theme="" data-icon="info" data-transition="slide" >
+                Stats
+              </a>
+              </li>
+              <li>
+              <a href="#settings" data-theme="" data-icon="gear" data-transition="slide" class="ui-btn-active">
+                Settings
+              </a>
+              </li>
 
-        <!-- Settings -->
-        <div data-role="page" id="settings">
-            <div id="settings-header" data-theme="a" data-role="header">
-                <h3>
-                  Settings
-                </h3>
-                <div data-role="navbar" data-iconpos="left">
-                    <ul>
-                        <li>
-                            <a href="#home" data-theme="" data-transition="slide" data-direction="reverse">
-                                Home
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div data-role="content">
-              settings here..
-            </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Stats -->
+      <div data-role="page" data-bind="with: StatsViewModel"  id="stats">
+        <div id="stats-header" data-theme="a" data-role="header">
+          <h3>
+            Stats
+          </h3>
+        </div>
+        <div data-role="content">
+          stats here..
         </div>
 
+        <div id="stats-footer" data-theme="a" data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-iconpos="left">
+            <ul>
+              <li>
+              <a href="#home" data-theme="" data-icon="home" data-transition="slide" >
+                Home
+              </a>
+              </li>
+              <li>
+              <a href="#account" data-theme="" data-icon="grid" data-transition="slide">
+                Account
+              </a>
+              </li>
+              <li>
+              <a href="#stats" data-theme="" data-icon="info" data-transition="slide" class="ui-btn-active">
+                Stats
+              </a>
+              </li>
+              <li>
+              <a href="#settings" data-theme="" data-icon="gear" data-transition="slide">
+                Settings
+              </a>
+              </li>
 
-        <!-- Stats -->
-        <div data-role="page" id="stats">
-            <div id="stats-header" data-theme="a" data-role="header">
-                <h3>
-                  Stats
-                </h3>
-                <div data-role="navbar" data-iconpos="left">
-                    <ul>
-                        <li>
-                            <a href="#home" data-theme="" data-transition="slide" data-direction="reverse">
-                                Home
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div data-role="content">
-              stats here..
-            </div>
+            </ul>
+          </div>
         </div>
+      </div>
+
+
+      <!-- Account -->
+      <div data-role="page" data-bind="with: AccountViewModel"  id="account">
+        <div id="account-header" data-theme="a" data-role="header">
+          <h3>
+            Account
+          </h3>
+        </div>
+        <div data-role="content">
+          Account here..
+        </div>
+        <div id="account-footer" data-theme="a" data-role="footer" data-position="fixed">
+          <div data-role="navbar" data-iconpos="left">
+            <ul>
+              <li>
+              <a href="#home" data-theme="" data-icon="home" data-transition="slide" >
+                Home
+              </a>
+              </li>
+              <li>
+              <a href="#account" data-theme="" data-icon="grid" data-transition="slide" class="ui-btn-active">
+                Account
+              </a>
+              </li>
+              <li>
+              <a href="#stats" data-theme="" data-icon="info" data-transition="slide" >
+                Stats
+              </a>
+              </li>
+              <li>
+              <a href="#settings" data-theme="" data-icon="gear" data-transition="slide">
+                Settings
+              </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script data-main="javascripts/app" src="../javascripts/lib/require.js"></script>
   </body>
 </html>
